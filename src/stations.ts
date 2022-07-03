@@ -271,7 +271,7 @@ export const stations: Station[] = [
   },
   {
     id: "26",
-    name: "高輪ゲートウェイ",
+    name: "高輪ｹﾞｰﾄｳｪｲ",
     hiragana: "たかなわげーとうぇい",
     romaji: "takanawagateway",
     boundFor: "東京･上野",
