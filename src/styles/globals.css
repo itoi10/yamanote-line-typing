@@ -4,8 +4,19 @@
 
 @layer utilities {
   .border-large {
-    width: 200rem;
-    height: 80rem;
+    top: -10rem;
+    right: -10vw;
+    width: 180rem;
+    height: 180rem;
     border-width: 128px;
+    outline: 10px inset rgb(0 110 0);
+    outline-offset: -128px;
+    animation: rv-spin 3s linear infinite;
+  }
+
+  @keyframes rv-spin {
+    to {
+      transform: rotate(-360deg);
+    }
   }
 }
