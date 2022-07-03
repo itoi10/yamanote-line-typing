@@ -5,6 +5,7 @@ import { stations } from "@/stations";
 import { useEffect } from "react";
 import NumberingIcon from "@/components/NumberingIcon";
 import Clock from "@/components/Clock";
+import Image from "next/image";
 
 const Home: NextPage = () => {
   const [currentNum, setCurrentNum] = useState<number>(0);
@@ -79,15 +80,9 @@ const Home: NextPage = () => {
             </div>
 
             {/* 緑の曲線 */}
-            <div
-              className="border-large  absolute
-            rounded-full
-            border-t-gray-300
-            border-l-gray-300
-            border-b-green-400
-            border-r-green-400
-            "
-            ></div>
+            <div className="w-full">
+              <Image src="/greenline.gif" alt="greenline" width="820" height="255" />
+            </div>
           </div>
 
           <div className="absolute h-screen w-full  border bg-gray-100">
