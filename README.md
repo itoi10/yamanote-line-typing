@@ -1,3 +1,15 @@
+# 🟩 山手線タイピング
+
+山手線の駅名を覚えたいときなどに
+
+https://yamanote-line-typing.vercel.app/
+
+
+<img src="./demo.gif" width="640" />
+
+---
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
