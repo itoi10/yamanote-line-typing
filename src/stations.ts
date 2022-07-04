@@ -2,7 +2,7 @@ export type Station = {
   id: string;
   name: string;
   hiragana: string;
-  threeLetterCode?: string;
+  ryaku?: string;
   romaji: string;
   transfers?: string[];
   boundFor: string;
@@ -13,7 +13,7 @@ export const stations: Station[] = [
     id: "01",
     name: "東京",
     hiragana: "とうきょう",
-    threeLetterCode: "TYO",
+    ryaku: "TYO",
     romaji: "tokyo",
     transfers: [
       "🚄東北・山形・秋田・北海道・上越・北陸新幹線",
@@ -32,7 +32,7 @@ export const stations: Station[] = [
     id: "02",
     name: "神田",
     hiragana: "かんだ",
-    threeLetterCode: "KND",
+    ryaku: "KND",
     romaji: "kanda",
     transfers: ["🟧中央線", "🟠銀座線"],
     boundFor: "上野･池袋",
@@ -41,7 +41,7 @@ export const stations: Station[] = [
     id: "03",
     name: "秋葉原",
     hiragana: "あきはばら",
-    threeLetterCode: "AKB",
+    ryaku: "AKB",
     romaji: "akihabara",
     transfers: ["🟨総武線各駅停車", "⬛️つくばエクスプレス線", "⚪️日比谷線"],
     boundFor: "上野･池袋",
@@ -58,7 +58,7 @@ export const stations: Station[] = [
     id: "05",
     name: "上野",
     hiragana: "うえの",
-    threeLetterCode: "UEN",
+    ryaku: "UEN",
     romaji: "ueno",
     transfers: [
       "🚄東北・山形・秋田・北海道・上越・北陸新幹線",
@@ -82,7 +82,7 @@ export const stations: Station[] = [
     id: "07",
     name: "日暮里",
     hiragana: "にっぽり",
-    threeLetterCode: "NPR",
+    ryaku: "NPR",
     romaji: "nippori",
     transfers: ["🟩常磐線", "⬛️京成線", "⬛️日暮里・舎人ライナー"],
     boundFor: "池袋･新宿",
@@ -131,7 +131,7 @@ export const stations: Station[] = [
     id: "13",
     name: "池袋",
     hiragana: "いけぶくろ",
-    threeLetterCode: "IKB",
+    ryaku: "IKB",
     romaji: "ikebukuro",
     transfers: [
       "🟥湘南新宿ライン",
@@ -170,7 +170,7 @@ export const stations: Station[] = [
     id: "17",
     name: "新宿",
     hiragana: "しんじゅく",
-    threeLetterCode: "SJK",
+    ryaku: "SJK",
     romaji: "shinjuku",
     transfers: [
       "🟧中央線",
@@ -205,7 +205,7 @@ export const stations: Station[] = [
     id: "20",
     name: "渋谷",
     hiragana: "しぶや",
-    threeLetterCode: "SBY",
+    ryaku: "SBY",
     romaji: "shibuya",
     transfers: [
       "🟥湘南新宿ライン",
@@ -223,7 +223,7 @@ export const stations: Station[] = [
     id: "21",
     name: "恵比寿",
     hiragana: "えびす",
-    threeLetterCode: "EBS",
+    ryaku: "EBS",
     romaji: "ebisu",
     transfers: ["🟥湘南新宿ライン", "⚪️日比谷線"],
     boundFor: "品川･東京",
@@ -248,7 +248,7 @@ export const stations: Station[] = [
     id: "24",
     name: "大崎",
     hiragana: "おおさき",
-    threeLetterCode: "OSK",
+    ryaku: "OSK",
     romaji: "osaki",
     transfers: ["🟥湘南新宿ライン", "⬛️相鉄線直通", "🔵りんかい線"],
     boundFor: "品川･東京",
@@ -257,13 +257,13 @@ export const stations: Station[] = [
     id: "25",
     name: "品川",
     hiragana: "しながわ",
-    threeLetterCode: "SGW",
+    ryaku: "SGW",
     romaji: "shinagawa",
     transfers: [
       "🚄東海道・山陽新幹線",
       "🟦京浜東北線(大井町・蒲田方面)",
       "🟧東海道線",
-      "🟧上野東京ライン",
+      "上野東京ライン",
       "🟦横須賀線",
       "⬛️京急線",
     ],
@@ -271,7 +271,7 @@ export const stations: Station[] = [
   },
   {
     id: "26",
-    name: "高輪ｹﾞｰﾄｳｪｲ",
+    name: "高輪ゲートウェイ",
     hiragana: "たかなわげーとうぇい",
     romaji: "takanawagateway",
     boundFor: "東京･上野",
@@ -288,7 +288,7 @@ export const stations: Station[] = [
     id: "28",
     name: "浜松町",
     hiragana: "はままつちょう",
-    threeLetterCode: "HMC",
+    ryaku: "HMC",
     romaji: "hamamatsucho",
     transfers: ["🟦東京モノレール羽田空港線", "🟣都営大江戸線"],
     boundFor: "東京･上野",
@@ -297,7 +297,7 @@ export const stations: Station[] = [
     id: "29",
     name: "新橋",
     hiragana: "しんばし",
-    threeLetterCode: "SMB",
+    ryaku: "SMB",
     romaji: "shimbashi",
     transfers: ["🟠銀座線", "🟣都営浅草線", "⬛️ゆりかもめ"],
     boundFor: "東京･上野",

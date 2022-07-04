@@ -1,18 +1,12 @@
 type Props = {
-  number: string;
+  id: string;
 };
 
-// 駅ナンバリング
-const NumberingIcon: React.FC<Props> = ({ number }) => {
+const NumberingIcon: React.FC<Props> = ({ id }) => {
   return (
-    <div
-      className={
-        "m-2 h-8 w-8  rounded-md border-2 border-solid  bg-white text-center md:h-16 md:w-16 md:border-8 " +
-        "border-green-400"
-      }
-    >
-      <p className="text-xs leading-none text-black md:text-lg md:leading-none">{"JY"}</p>
-      <p className="text-sm leading-none text-black md:text-3xl md:leading-none">{number}</p>
+    <div className="m-1 h-16 w-16 rounded-md border-8 border-solid border-green-400 bg-white text-center">
+      <p className="text-lg leading-none text-black">JY</p>
+      <p className="text-3xl leading-none text-black">{id}</p>
     </div>
   );
 };
