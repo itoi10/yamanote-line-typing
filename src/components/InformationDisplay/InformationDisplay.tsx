@@ -1,8 +1,8 @@
 import { Station } from "@/stations";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import NumberingIcon from "../NumberingIcon";
 import Clock from "./Clock";
-import Image from "next/image";
 
 type Props = {
   curStation: Station;
@@ -56,7 +56,10 @@ const InformationDisplay: React.FC<Props> = ({ curStation }) => {
               <p>乗換えのご案内</p>
               <div className="flex flex-row flex-wrap md:w-3/5">
                 {curStation.transfers?.map((transfer, i) => (
-                  <span key={i} className="bold w-1/2 p-1 px-2  font-bold">
+                  <span
+                    key={i}
+                    className="bold font-outline w-1/2 stroke-inherit  p-1 px-2 font-bold"
+                  >
                     {transfer}
                   </span>
                 ))}

@@ -1,12 +1,11 @@
-import type { NextPage } from "next";
+import Container from "@/components/Container";
 import Head from "@/components/Head";
-import { KeyboardEvent, useState } from "react";
-import { Station, stations } from "@/stations";
-import { useEffect } from "react";
 import InformationDisplay from "@/components/InformationDisplay/InformationDisplay";
 import NextButton from "@/components/NextButton";
-import Container from "@/components/Container";
 import TypingString from "@/components/TypingString";
+import { Station, stations } from "@/stations";
+import type { NextPage } from "next";
+import { KeyboardEvent, useEffect, useState } from "react";
 
 const Home: NextPage = () => {
   const [curStation, setCurStation] = useState<Station>(stations[0]);
@@ -22,6 +21,7 @@ const Home: NextPage = () => {
     let nextIdx = stations.indexOf(curStation) + 1;
     if (nextIdx >= stations.length) nextIdx = 0;
     setCurStation(stations[nextIdx]);
+    setTypingIdx(0);
   };
 
   const keyPress = (e: KeyboardEvent<HTMLDivElement>) => {
@@ -29,7 +29,6 @@ const Home: NextPage = () => {
     if (e.key === c) {
       if (typingIdx === typingChars.length - 1) {
         moveToNext();
-        setTypingIdx(0);
       } else {
         setTypingIdx(typingIdx + 1);
       }
