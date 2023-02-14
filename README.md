@@ -8,7 +8,7 @@ https://yamanote-line-typing.vercel.app/
 <img src="./demo.gif" width="640" />
 
 ### 使用技術
-Next.js, TypeScript, TailwindCSS(レスポンシブ対応)
+Next.js, TypeScript, TailwindCSS(レスポンシブ対応), Vercel(mainマージ時自動デプロイ)
 
 
 ---
