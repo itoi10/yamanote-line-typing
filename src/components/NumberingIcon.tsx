@@ -2,8 +2,8 @@ type Props = {
   number: string;
 };
 
-// 駅ナンバリング
-const NumberingIcon: React.FC<Props> = ({ number }) => {
+// 駅ナンバリングを表示するコンポーネント
+export default function NumberingIcon({ number }: Props) {
   return (
     <div
       className={
@@ -15,6 +15,4 @@ const NumberingIcon: React.FC<Props> = ({ number }) => {
       <p className="text-sm leading-none text-black md:text-3xl md:leading-none">{number}</p>
     </div>
   );
-};
-
-export default NumberingIcon;
+}

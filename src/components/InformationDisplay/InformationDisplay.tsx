@@ -8,7 +8,8 @@ type Props = {
   curStation: Station;
 };
 
-const InformationDisplay: React.FC<Props> = ({ curStation }) => {
+// 駅の情報を表示するコンポーネント
+export default function InformationDisplay({ curStation }: Props) {
   const [dispName, setDispName] = useState<string[]>([]);
 
   useEffect(() => {
@@ -75,6 +76,4 @@ const InformationDisplay: React.FC<Props> = ({ curStation }) => {
       </div>
     </>
   );
-};
-
-export default InformationDisplay;
+}

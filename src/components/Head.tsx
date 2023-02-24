@@ -1,11 +1,10 @@
 import NextHead from "next/head";
 
-const Head: React.FC = () => {
+// ページのタイトルを設定するコンポーネント
+export default function Head() {
   return (
     <NextHead>
-      <title>Typing</title>
+      <title>山手線タイピング</title>
     </NextHead>
   );
-};
-
-export default Head;
+}
