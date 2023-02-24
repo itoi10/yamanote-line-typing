@@ -7,10 +7,13 @@ type Props = {
   typingIdx: number;
 };
 
-const TypingString: React.FC<Props> = ({ curStation, typingChars, typingIdx }) => {
+// タイピング中の文字列を表示するコンポーネント
+export default function TypingString({ curStation, typingChars, typingIdx }: Props) {
   return (
     <div className="mb-1 flex w-full items-end justify-center  text-3xl md:text-8xl">
+      {/* 駅ナンバリング */}
       <NumberingIcon number={curStation.id} />
+      {/* 入力した文字を黒、未入力文字を灰色で表示 */}
       <div className="ml-6 flex">
         {typingChars.map((char, i) => {
           let color = "text-gray-300";
@@ -26,6 +29,4 @@ const TypingString: React.FC<Props> = ({ curStation, typingChars, typingIdx }) =
       </div>
     </div>
   );
-};
-
-export default TypingString;
+}

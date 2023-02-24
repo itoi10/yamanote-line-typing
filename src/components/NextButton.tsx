@@ -5,7 +5,8 @@ type Props = {
   moveToNext: () => void;
 };
 
-const NextButton: React.FC<Props> = ({ curStation, moveToNext }) => {
+// 次の駅に移動するボタン
+export default function NextButton({ curStation, moveToNext }: Props) {
   return (
     <div className="absolute flex  h-screen w-full justify-center  bg-gray-100">
       <button
@@ -16,6 +17,4 @@ const NextButton: React.FC<Props> = ({ curStation, moveToNext }) => {
       </button>
     </div>
   );
-};
-
-export default NextButton;
+}
